@@ -9,7 +9,7 @@ Op-amps have two input pins (inverting and non-inverting) and one output pin. Th
 
 Opamps can be used in both linear and non linear applications. 
 - Linear applications include amplifiers, filters, voltage regulators and signal conditioners. 
-- Non linear applications include Schmitt Triggers, comparator and oscillators. 
+- Non linear applications include Schmitt Triggers, comparators and oscillators. 
 
 ## Circuit Design
 
@@ -30,7 +30,7 @@ Overall, this circuit provides an adjustable voltage reference that can be used 
  
 ### Environment Setup
 - Set up a python environment. 
-- Install LtSpice library
+- Install LtSpice library.
         ```
         pip install ltspice
         ``` <br>
@@ -54,7 +54,7 @@ Overall, this circuit provides an adjustable voltage reference that can be used 
 
 ### Launching LtSpice on python
 
-- Open [Python](). Give the right path and run the code. 
+- Open the python file. Give the right path and run the code. 
 
 ## License
 This project is licensed under the MIT License - see the LICENSE.md file for details.
