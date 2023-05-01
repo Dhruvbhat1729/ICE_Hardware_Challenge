@@ -35,7 +35,7 @@ Overall, this circuit provides an adjustable voltage reference that can be used 
         pip install ltspice
         ``` <br>
         
- ### LtSpice setup
+ ### LTspice setup
 1. Download [TL431.asc](https://github.com/Dhruvbhat1729/ICE_Hardware_Challenge/blob/main/TL431_8inch.asy) file. <br>
 2. Copy the downloaded file and go to the directory where LtSpice is installed, locate sym folder inside LtSpic and paste the file.
    Eg: C:\Program Files\LTC\LTspiceXVII\lib\sym. <br>
@@ -44,7 +44,7 @@ Overall, this circuit provides an adjustable voltage reference that can be used 
 5. Right click on TL431.asy and create a symbol. <br>
 6. Go to components and choose TL431. <br>
 
-### Running LtSpice file 
+### Running LTspice file 
 
 - Change the voltage and observe the current accross the LED's. <br>
 - Observe the current accross LED1 and LED2. <br>
@@ -52,7 +52,7 @@ Overall, this circuit provides an adjustable voltage reference that can be used 
 - Check with voltage <4.1V. Both LED1 and LED2 conducts. 
 - In case the circuit does not work, close the files and open them again. 
 
-### Launching LtSpice on python
+### Launching LTspice on python
 
 - Open the python file. Give the right path and run the code. 
 
