@@ -41,7 +41,7 @@ Overall, this circuit provides an adjustable voltage reference that can be used 
    Eg: C:\Program Files\LTC\LTspiceXVII\lib\sym. <br>
 3. Download [TL431.cir](https://github.com/Dhruvbhat1729/ICE_Hardware_Challenge/blob/main/TL431.cir). <br>
 4. Once TL431.cir is downloaded click on the file and open it on LtSpice. <br>
-5. Right click on TL431.asy and create a symbol. <br>
+5. Right click on rge [highlighted text](https://github.com/Dhruvbhat1729/ICE_Hardware_Challenge/blob/main/createsymbol.PNG) in TL431.cir and create a symbol. <br>
 6. Go to components and choose TL431. <br>
 
 ### Running LTspice file 
