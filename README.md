@@ -36,7 +36,7 @@ Overall, this circuit provides an adjustable voltage reference that can be used 
         ``` <br>
         
  ### LTspice setup
-1. Download [TL431.asc](https://github.com/Dhruvbhat1729/ICE_Hardware_Challenge/blob/main/TL431_8inch.asy) file. <br>
+1. Download [TL431.asy](https://github.com/Dhruvbhat1729/ICE_Hardware_Challenge/blob/main/TL431_8inch.asy) file. <br>
 2. Copy the downloaded file and go to the directory where LtSpice is installed, locate sym folder inside LtSpic and paste the file.
    Eg: C:\Program Files\LTC\LTspiceXVII\lib\sym. <br>
 3. Download [TL431.cir](https://github.com/Dhruvbhat1729/ICE_Hardware_Challenge/blob/main/TL431.cir). <br>
