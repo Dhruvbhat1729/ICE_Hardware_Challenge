@@ -1,0 +1,61 @@
+**********************************************************
+*
+* TL431 Family
+*
+* Nexperia
+*
+*  Adjustable precision Three-terminal shunt regulator family 
+*
+* Adjustment range from 2.5V to 36V
+* Current Range from 1mA to 100mA
+*
+*
+*
+* 
+*
+* Extraction date (week/year): 09/2020
+* Spicemodel includes temperature dependency
+*
+**********************************************************
+*#
+.subckt TL431_8inch  A K R
+Bk kr em I=limit(exp(V(B1,agnd)/0.045)*1E-19*(1+V(k,agnd)/va)+I(BEF)*2,0,0.15)
+D1 agnd y D0V5
+CM1 K B 11p 
+Drev agnd K DREV
+rimp1 B1 B 500k
+Gin agnd ef1 ri agnd 0.1
+R3 ef2 y 5k
+R2 x agnd 10k
+CT1 agnd ef1 10p 
+Rcl K kr 9
+Ck kr agnd 1p 
+R1 ef2 x 5k
+RT1 ef1 agnd {RTEMP}
+CR1 agnd x 9p 
+BEF ef1 ef2 I=((V(ef1,ef2))/25.25)**3
+dclp B kr DC
+Ds agnd B DS
+Rbd agnd A 0.03
+rimp agnd P001 1.5Meg
+cimp B1 P001 0.012p 
+Rfb em agnd 1
+BB agnd B I=tanh(25*V(x,y))*I(R2)+(V(k,agnd)/va)*I(R2)*0.7
+DESD1 agnd R D6Z8
+Ds1 P002 agnd DS
+GFB B agnd em agnd 2.5E-5
+rp1 B P002 130k
+R2A x agnd 10k
+BIN ri agnd I=I(BEF)/115/(temp+273)*300
+Rin R ri 200
+.model D D
+.param va=130 rgap1=15k rk=230
+.model DC     d (Is=1e-17 rs=1 Cj0=1e-15  Vj=0.6 M=0.35 )
+.model DREV d (Is=1.55e-12  rs=1  Cj0=28e-12 Vj=0.6 M=0.35 )
+.param RTEMP=4.02* (2E-9*Temp**3 + 1E-6*Temp**2 - 0.0002*Temp+2.491)
+.model D0V5 d (Is=1.5e-15  N=1 Cjo=1e-18 Vj=0.75 M=0.6  BV=0.4947V  Ibv=100u  nbv=0.08 rs=3 )
+.model DS     d( Is=5e-11 Ibv=1e-5 Rs=6 N=1.05 Cjo=1f M=.5 Eg=.69 Xti=2 Vj=0.65 )
+.model D6Z8 d (Is=1.5e-15  N=1 Cjo=5e-12 Vj=0.75 M=0.6  BV=6.8 Ibv=1m  nbv=0.08 rs=3 )
+*.lib standard.dio
+*.backanno
+.ends
